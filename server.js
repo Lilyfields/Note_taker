@@ -21,7 +21,7 @@ app.use(express.static("./public"));
 
 //API Route | "GET" request - data is saved and then join to db json
 app.get("/api/notes", function(req,res) {
-  res.sendFile(path.join(__dirname,"./db.json"))
+  res.sendFile(path.join(__dirname,"./db.json"));
    
 });
 

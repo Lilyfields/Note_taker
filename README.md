@@ -1,134 +1,104 @@
-# 12 SQL: Employee Tracker
+# 11 Express.js: Note Taker
 
 ## Your Task
 
-Developers frequently have to create interfaces that allow non-developers to easily view and interact with information stored in databases. These interfaces are called **content management systems (CMS)**. Your assignment this week is to build a command-line application from scratch to manage a company's employee database, using Node.js, Inquirer, and MySQL.
+Your assignment is to modify starter code to create an application called Note Taker that can be used to write and save notes. This application will use an Express.js back end and will save and retrieve note data from a JSON file.
 
-Because this application won’t be deployed, you’ll also need to create a walkthrough video that demonstrates its functionality and all of the following acceptance criteria being met. You’ll need to submit a link to the video and add it to the README of your project.
+The application’s front end has already been created. It's your job to build the back end, connect the two, and then deploy the entire application to Heroku.
+
 
 ## User Story
 
-```md
-AS A business owner
-I WANT to be able to view and manage the departments, roles, and employees in my company
-SO THAT I can organize and plan my business
 ```
+AS A small business owner
+I WANT to be able to write and save notes
+SO THAT I can organize my thoughts and keep track of tasks I need to complete
+```
+
 
 ## Acceptance Criteria
 
-```md
-GIVEN a command-line application that accepts user input
-WHEN I start the application
-THEN I am presented with the following options: view all departments, view all roles, view all employees, add a department, add a role, add an employee, and update an employee role
-WHEN I choose to view all departments
-THEN I am presented with a formatted table showing department names and department ids
-WHEN I choose to view all roles
-THEN I am presented with the job title, role id, the department that role belongs to, and the salary for that role
-WHEN I choose to view all employees
-THEN I am presented with a formatted table showing employee data, including employee ids, first names, last names, job titles, departments, salaries, and managers that the employees report to
-WHEN I choose to add a department
-THEN I am prompted to enter the name of the department and that department is added to the database
-WHEN I choose to add a role
-THEN I am prompted to enter the name, salary, and department for the role and that role is added to the database
-WHEN I choose to add an employee
-THEN I am prompted to enter the employee’s first name, last name, role, and manager, and that employee is added to the database
-WHEN I choose to update an employee role
-THEN I am prompted to select an employee to update and their new role and this information is updated in the database 
 ```
+GIVEN a note-taking application
+WHEN I open the Note Taker
+THEN I am presented with a landing page with a link to a notes page
+WHEN I click on the link to the notes page
+THEN I am presented with a page with existing notes listed in the left-hand column, plus empty fields to enter a new note title and the note’s text in the right-hand column
+WHEN I enter a new note title and the note’s text
+THEN a Save icon appears in the navigation at the top of the page
+WHEN I click on the Save icon
+THEN the new note I have entered is saved and appears in the left-hand column with the other existing notes
+WHEN I click on an existing note in the list in the left-hand column
+THEN that note appears in the right-hand column
+WHEN I click on the Write icon in the navigation at the top of the page
+THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
+```
+
 
 ## Mock-Up
 
-The following video shows an example of the application being used from the command line:
+The following images show the web application's appearance and functionality:
 
-[![A video thumbnail shows the command-line employee management application with a play button overlaying the view.](./Assets/12-sql-homework-video-thumbnail.png)](https://2u-20.wistia.com/medias/2lnle7xnpk)
+![Existing notes are listed in the left-hand column with empty fields on the right-hand side for the new note’s title and text.](./Assets/11-express-homework-demo-01.png)
+
+![Note titled “Balance accounts” reads, “Balance account books by end of day Monday,” with other notes listed on the left.](./Assets/11-express-homework-demo-02.png)
+
 
 ## Getting Started
 
-You’ll need to use the [MySQL2 package](https://www.npmjs.com/package/mysql2) to connect to your MySQL database and perform queries, the [Inquirer package](https://www.npmjs.com/package/inquirer) to interact with the user via the command line, and the [console.table package](https://www.npmjs.com/package/console.table) to print MySQL rows to the console.
+On the back end, the application should include a `db.json` file that will be used to store and retrieve notes using the `fs` module.
 
-**Important**: You will be committing a file that contains your database credentials. Make sure that your MySQL password is not used for any other personal accounts, because it will be visible on GitHub. In upcoming lessons, you will learn how to better secure this password, or you can start researching npm packages now that could help you.
+The following HTML routes should be created:
 
-You might also want to make your queries asynchronous. MySQL2 exposes a `.promise()` function on Connections to upgrade an existing non-Promise connection to use Promises. To learn more and make your queries asynchronous, refer to the [npm documentation on MySQL2](https://www.npmjs.com/package/mysql2).
+* `GET /notes` should return the `notes.html` file.
 
-Design the database schema as shown in the following image:
+* `GET *` should return the `index.html` file.
 
-![Database schema includes tables labeled “employee,” role,” and “department.”](./Assets/12-sql-homework-demo-01.png)
+The following API routes should be created:
 
-As the image illustrates, your schema should contain the following three tables:
+* `GET /api/notes` should read the `db.json` file and return all saved notes as JSON.
 
-* `department`
+* `POST /api/notes` should receive a new note to save on the request body, add it to the `db.json` file, and then return the new note to the client. You'll need to find a way to give each note a unique id when it's saved (look into npm packages that could do this for you).
 
-    * `id`: `INT PRIMARY KEY`
-
-    * `name`: `VARCHAR(30)` to hold department name
-
-* `role`
-
-    * `id`: `INT PRIMARY KEY`
-
-    * `title`: `VARCHAR(30)` to hold role title
-
-    * `salary`: `DECIMAL` to hold role salary
-
-    * `department_id`: `INT` to hold reference to department role belongs to
-
-* `employee`
-
-    * `id`: `INT PRIMARY KEY`
-
-    * `first_name`: `VARCHAR(30)` to hold employee first name
-
-    * `last_name`: `VARCHAR(30)` to hold employee last name
-
-    * `role_id`: `INT` to hold reference to employee role
-
-    * `manager_id`: `INT` to hold reference to another employee that is the manager of the current employee (`null` if the employee has no manager)
-
-You might want to use a separate file that contains functions for performing specific SQL queries you'll need to use. A constructor function or class could be helpful for organizing these. You might also want to include a `seeds.sql` file to pre-populate your database, making the development of individual features much easier.
 
 ## Bonus
 
-Try to add some additional functionality to your application, such as the ability to do the following:
+You haven’t learned how to handle DELETE requests, but this application offers that functionality on the front end. As a bonus, try to add the DELETE route to the application using the following guideline:
 
-* Update employee managers.
+* `DELETE /api/notes/:id` should receive a query parameter that contains the id of a note to delete. To delete a note, you'll need to read all notes from the `db.json` file, remove the note with the given `id` property, and then rewrite the notes to the `db.json` file.
 
-* View employees by manager.
-
-* View employees by department.
-
-* Delete departments, roles, and employees.
-
-* View the total utilized budget of a department&mdash;in other words, the combined salaries of all employees in that department.
 
 ## Grading Requirements
 
-This homework is graded based on the following criteria:
+This homework is graded based on the following criteria: 
 
-### Deliverables: 10%
-
-* Your GitHub repository containing your application code.
-
-### Walkthrough Video: 27%
-
-* A walkthrough video that demonstrates the functionality of the employee tracker must be submitted, and a link to the video should be included in your README file.
-
-* The walkthrough video must show all of the technical acceptance criteria being met.
-
-* The walkthrough video must demonstrate how a user would invoke the application from the command line.
-
-* The walkthrough video must demonstrate a functional menu with the options outlined in the acceptance criteria.
 
 ### Technical Acceptance Criteria: 40%
 
 * Satisfies all of the preceding acceptance criteria plus the following:
 
-    * Uses the [Inquirer package](https://www.npmjs.com/package/inquirer).
+  * Application front end must connect to an Express.js back end.
 
-    * Uses the [MySQL2 package](https://www.npmjs.com/package/mysql2) to connect to a MySQL database.
+  * Application back end must store notes that have a unique id in a JSON file.
 
-    * Uses the [console.table package](https://www.npmjs.com/package/console.table) to print MySQL rows to the console.
+  * Application must be deployed to Heroku.
 
-* Follows the table schema outlined in the homework instructions.
+
+### Deployment: 36%
+
+* Application deployed at live URL.
+
+* Application loads with no errors.
+
+* Application GitHub URL submitted.
+
+* GitHub repository contains application code.
+
+
+### Application Quality: 11%
+
+* Application console is free of errors.
+
 
 ### Repository Quality: 13%
 
@@ -140,31 +110,19 @@ This homework is graded based on the following criteria:
 
 * Repository contains multiple descriptive commit messages.
 
-* Repository contains a high-quality README with description and a link to a walkthrough video.
+* Repository contains quality README file with description, screenshot, and link to deployed application.
 
-### Application Quality 10%
 
-* The application user experience is intuitive and easy to navigate.
+### Bonus: +10 Points
 
-### Bonus
+* Application allows users to delete notes.
 
-Fulfilling any of the following can add up to 20 points to your grade. Note that the highest grade you can achieve is still 100:
-
-* Application allows users to update employee managers (2 points).
-
-* Application allows users to view employees by manager (2 points).
-
-* Application allows users to view employees by department (2 points).
-
-* Application allows users to delete departments, roles, and employees (2 points for each).
-
-* Application allows users to view the total utilized budget of a department&mdash;in other words, the combined salaries of all employees in that department (8 points).
 
 ## Review
 
 You are required to submit BOTH of the following for review:
 
-* A walkthrough video demonstrating the functionality of the application.
+* The URL of the functional, deployed application.
 
 * The URL of the GitHub repository, with a unique name and a README describing the project.
 

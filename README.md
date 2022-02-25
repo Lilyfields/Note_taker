@@ -37,18 +37,14 @@ https://blooming-falls-30021.herokuapp.com/
 
 **DELETE**
 
+<img src="https://user-images.githubusercontent.com/94832331/155739643-7f5acc85-6ad0-4386-893b-76d3bc6bb6fc.png" width="600" height="300">
 
-<p align="center">
-<img width="100" height:"100" src="file:///C:/Users/Lily/Desktop/delete%20function%20.png/100/100"
-</p>
-
-
+`````````````````````````````````````````````````````````````````````````````````````````````````````````
 * Note in the previous screenshot we had school events on the left side, which we have created and save.
 * By pressing on the bin icon, we have removed school events. 
 * Then by pressing on the plus sign we created a new note; which we have named and saved as class. 
 
-
-
+`````````````````````````````````````````````````````````````````````````````````````````````````````````
 
  
 ## Acceptance Criteria

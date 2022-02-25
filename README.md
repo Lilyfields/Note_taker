@@ -28,23 +28,27 @@ https://blooming-falls-30021.herokuapp.com/
 
 <img src="https://user-images.githubusercontent.com/94832331/155736047-392f4272-e47b-493c-bab6-6e840c2742f6.png" width="600" height="300">
 
-````````````````````````````````````````````````````````````````````````````````````````````````````````````````
+
+
+``````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
 
 * Note when you start typing in the content the save icon will appear in the right top corner.
 * If you want to create a new note, you can push on the plus sign and the application will enable you to do this.
 
-````````````````````````````````````````````````````````````````````````````````````````````````````````````````
+``````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
+
 
 **DELETE**
 
 <img src="https://user-images.githubusercontent.com/94832331/155739643-7f5acc85-6ad0-4386-893b-76d3bc6bb6fc.png" width="600" height="300">
 
-`````````````````````````````````````````````````````````````````````````````````````````````````````````
+
+````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
 * Note in the previous screenshot we had school events on the left side, which we have created and save.
 * By pressing on the bin icon, we have removed school events. 
 * Then by pressing on the plus sign we created a new note; which we have named and saved as class. 
 
-`````````````````````````````````````````````````````````````````````````````````````````````````````````
+````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
 
  
 ## Acceptance Criteria

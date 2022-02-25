@@ -28,15 +28,12 @@ https://blooming-falls-30021.herokuapp.com/
 
 <img src="https://user-images.githubusercontent.com/94832331/155736047-392f4272-e47b-493c-bab6-6e840c2742f6.png" width="500" height="300">
 
-
-
-
+````````````````````````````````````````````````````````````````````````````````````````````````````````````````
 
 * Note when you start typing in the content the save icon will appear in the right top corner.
 * If you want to create a new note, you can push on the plus sign and the application will enable you to do this.
 
-
-
+````````````````````````````````````````````````````````````````````````````````````````````````````````````````
 
 **DELETE**
 

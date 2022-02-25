@@ -26,7 +26,7 @@ https://blooming-falls-30021.herokuapp.com/
 **ADD & SAVE**
 
 
-<img src="https://user-images.githubusercontent.com/94832331/155736047-392f4272-e47b-493c-bab6-6e840c2742f6.png" width="300" height="400">
+<img src="https://user-images.githubusercontent.com/94832331/155736047-392f4272-e47b-493c-bab6-6e840c2742f6.png" width="500" height="300">
 
 
 

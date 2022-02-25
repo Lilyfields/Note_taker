@@ -25,9 +25,8 @@ https://blooming-falls-30021.herokuapp.com/
 
 **ADD & SAVE**
 
-<p align ="center">
-<img width="100" height="100" src="file:///C:/Users/Lily/Desktop/adding%20and%20saving%20note.png/100/100">
-</p>
+
+<img src="https://user-images.githubusercontent.com/94832331/155736047-392f4272-e47b-493c-bab6-6e840c2742f6.png" width="100" height="100">
 
 
 

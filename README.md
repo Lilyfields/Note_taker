@@ -17,7 +17,7 @@ SO THAT I can organize my thoughts and keep track of tasks I need to complete
 **********************************************
 ## LINK TO DEPLOY APPLICATION
 
-https://git.heroku.com/blooming-falls-30021.git
+https://blooming-falls-30021.herokuapp.com/
 
 **********************************************
 

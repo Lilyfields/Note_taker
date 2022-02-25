@@ -25,7 +25,9 @@ https://blooming-falls-30021.herokuapp.com/
 
 **ADD & SAVE**
 
-![adding and saving note](https://user-images.githubusercontent.com/94832331/155726404-44f49c47-751e-4a86-9908-a5117f7f1df9.png)
+<p align ="center">
+<img width="100" height="100" src="file:///C:/Users/Lily/Desktop/adding%20and%20saving%20note.png/100/100">
+</p>
 
 
 
@@ -33,16 +35,22 @@ https://blooming-falls-30021.herokuapp.com/
 * If you want to create a new note, you can push on the plus sign and the application will enable you to do this.
 
 
+
+
 **DELETE**
 
 
-![delete function ](https://user-images.githubusercontent.com/94832331/155729126-4a7c7887-b003-4377-8fb4-7e8d9865a5ad.png)
-
+<p align="center">
+<img width="100" height:"100" src="file:///C:/Users/Lily/Desktop/delete%20function%20.png/100/100"
+</p>
 
 
 * Note in the previous screenshot we had school events on the left side, which we have created and save.
 * By pressing on the bin icon, we have removed school events. 
-* Then by pressing on the plus sign we created a new note; which we have named and saved class. 
+* Then by pressing on the plus sign we created a new note; which we have named and saved as class. 
+
+
+
 
 ## Acceptance Criteria
 

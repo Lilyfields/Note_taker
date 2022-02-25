@@ -25,14 +25,14 @@ https://blooming-falls-30021.herokuapp.com/
 
 **ADD & SAVE**
 
-![adding and saving note](https://user-images.githubusercontent.com/94832331/155726404-44f49c47-751e-4a86-9908-a5117f7f1df9.png|width=100)
+![adding and saving note](https://user-images.githubusercontent.com/94832331/155726404-44f49c47-751e-4a86-9908-a5117f7f1df9.png)
 
 
 * Note when you start typing in the content the save icon will appear in the right top corner.
 * If you want to create a new note, you can push on the plus sign and the application will enable you to do this.
 
 
-![delete function ](https://user-images.githubusercontent.com/94832331/155729126-4a7c7887-b003-4377-8fb4-7e8d9865a5ad.png|width=100)
+![delete function ](https://user-images.githubusercontent.com/94832331/155729126-4a7c7887-b003-4377-8fb4-7e8d9865a5ad.png)
 
 
 * Note in the previous screenshot we had school events on the left side, which we have created and save.

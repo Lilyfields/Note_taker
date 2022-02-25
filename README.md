@@ -21,9 +21,11 @@ https://blooming-falls-30021.herokuapp.com/
 
 **********************************************
 
-##SCREENSHOTs OF THE NOTE TAKER APP:
+##  DEMO SCREENSHOTS :
 
-#
+**ADD & SAVE**
+
+<img src="Photos-adding%20and%20saving%20note.png"width"200">
 
 
 
